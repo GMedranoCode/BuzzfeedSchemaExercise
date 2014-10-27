@@ -27,3 +27,4 @@ CREATE TABLE image (
 );
 
 -- lets try to get this to github
+-- comments added 0746 am 10/27 :: trying to push/commit to github
