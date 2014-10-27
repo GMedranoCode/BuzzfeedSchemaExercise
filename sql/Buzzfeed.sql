@@ -3,6 +3,10 @@
 
 
 -- used article attributes for below.
+DROP TABLE IF EXISTS image;
+DROP TABLE IF EXISTS article;
+
+
 CREATE TABLE article (
    articleId INT UNSIGNED NOT NULL AUTO_INCREMENT,
    articleTitle VARCHAR(256),
@@ -17,11 +21,11 @@ CREATE TABLE article (
 
 CREATE TABLE image (
    imageId INT UNSIGNED NOT NULL AUTO_INCREMENT,
-   articleId INT UNSIGNED NOT NULL,
-   imageData BLOB         NOT NULL,
-   subject VARCHAR(128) NOT NULL,
-   caption VARCHAR (128)  NOT NULL,
-   imageType VARCHAR (8)  NOT NULL,
+   articleId INT UNSIGNED  NOT NULL,
+   imageData BLOB          NOT NULL,
+   subject VARCHAR(128)    NOT NULL,
+   caption VARCHAR (128)   NOT NULL,
+   imageType VARCHAR (8)   NOT NULL,
    PRIMARY KEY (imageId),
    FOREIGN KEY (articleId) REFERENCES article (articleId)
 );
