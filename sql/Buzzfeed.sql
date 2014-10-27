@@ -3,6 +3,7 @@
 
 
 -- used article attributes for below.
+-- Added drop table --note the reverse of command lines vs create table names
 DROP TABLE IF EXISTS image;
 DROP TABLE IF EXISTS article;
 
